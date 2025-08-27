@@ -39,7 +39,7 @@ jobs:
               \"target_commitish\": \"${{ github.sha }}\",
               \"name\": \"Release $RELEASE_TAG\",
               \"body\": \"Automated release with test file containing 100 A characters\",
-              \"draft\": false,
+              \"draft\": true,
               \"prerelease\": false
             }")
           echo $RELEASE_RESPONSE
