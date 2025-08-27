@@ -42,6 +42,7 @@ jobs:
               \"draft\": false,
               \"prerelease\": false
             }")
+          echo $RELEASE_RESPONSE
 
           UPLOAD_URL=$(echo "$RELEASE_RESPONSE" | jq -r '.upload_url' | sed's/{?name,label}//')
           RELEASE_ID=$(echo "$RELEASE_RESPONSE" | jq -r '.id')
